@@ -1,0 +1,10 @@
+# Requirements for OpenTitan SVA Generator
+torch>=2.0.0
+transformers>=4.35.0
+sentence-transformers>=2.2.2
+faiss-cpu>=1.7.4
+numpy>=1.21.0
+markdown>=3.4.0
+beautifulsoup4>=4.11.0
+hjson>=3.1.0
+accelerate>=0.21.0
