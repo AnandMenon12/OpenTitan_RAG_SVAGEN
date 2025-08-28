@@ -485,7 +485,7 @@ class OpenTitanSVASystem:
         print(f"Available IPs: {', '.join(self.ingester.target_ips)}")
         
         try:
-            ip_name = input("Enter IP name: ").strip().lower()
+            ip_name = "i2c"  # Fixed IP name for Jupyter notebook
             if not ip_name:
                 print("No IP name provided. Exiting.")
                 return
@@ -494,7 +494,7 @@ class OpenTitanSVASystem:
                 print(f"Unknown IP. Please choose from: {', '.join(self.ingester.target_ips)}")
                 return
             
-            query = input(f"Query for {ip_name}: ").strip()
+            query = "Generate assertions for I2C start and stop conditions, address acknowledgment, and data transmission timing"  # Example query for Collab notebook
             if not query:
                 print("No query provided. Exiting.")
                 return
@@ -521,7 +521,5 @@ def main():
     system.interactive_session()
 
 if __name__ == "__main__":
-    # This ensures that the dataclasses are defined in the opentitan_sva_generator module
-    # which prevents pickle errors when loading cached data in other scripts.
     main()
 
